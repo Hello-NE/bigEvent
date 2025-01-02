@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Server
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/big_event
+    username: root
+    password: Wangenyi200408
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #驼峰命名2下划线命名
