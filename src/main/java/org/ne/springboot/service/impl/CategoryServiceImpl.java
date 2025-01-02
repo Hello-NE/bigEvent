@@ -57,5 +57,7 @@ public class CategoryServiceImpl implements CategoryService {
         Map<String, Object> info = ThreadLocalUtils.get();
         int userId = Integer.parseInt((String) info.get("userId"));
         categoryMapper.update(category);
+
+
     }
 }
