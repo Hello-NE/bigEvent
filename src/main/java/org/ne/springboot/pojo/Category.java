@@ -3,6 +3,7 @@ package org.ne.springboot.pojo;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.groups.Default;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -12,10 +13,9 @@ public class Category {
 
     @NotNull(groups = Update.class)
     private Integer id;
-    @NotEmpty(groups = {Update.class, Add.class})
+    @NotEmpty
     private String categoryName;
     @NotEmpty
-    @NotEmpty(groups = {Update.class, Add.class})
     private String categoryAlias;
     private Integer createUser;
 
@@ -26,10 +26,10 @@ public class Category {
     private LocalDateTime updateTime;
 
 
-    public interface Add {
+    public interface Add extends Default {
 
     }
-    public interface Update {
+    public interface Update extends Default {
 
     }
 

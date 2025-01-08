@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @author en
- * @date 2025/1/1 下午6:14 1月
+ * @Date 2025/1/1 下午6:14 1月
  **/
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -60,7 +60,10 @@ public class CategoryServiceImpl implements CategoryService {
         Map<String, Object> info = ThreadLocalUtils.get();
         int userId = Integer.parseInt((String) info.get("userId"));
         categoryMapper.update(category);
+    }
 
-
+    @Override
+    public void deleteById(Integer id) {
+        categoryMapper.delete(id);
     }
 }
