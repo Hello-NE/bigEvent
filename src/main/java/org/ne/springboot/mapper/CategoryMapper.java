@@ -27,4 +27,7 @@ public interface CategoryMapper {
 //        @Update("update user set user_pic=#{userPic}, update_time=now() where id=#{id}")
     @Update("update category set category_name=#{categoryName},category_alias=#{categoryAlias},update_time=#{updateTime} where id=#{id}")
     void update(Category category);
+
+    @Delete("delete from category where id=#{id}")
+    void delete(Integer id);
 }

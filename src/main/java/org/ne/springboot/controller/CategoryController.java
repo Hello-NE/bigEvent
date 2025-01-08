@@ -51,4 +51,10 @@ public class CategoryController {
         categoryService.update(category);
         return Result.success(detail(category.getId()));
     }
+
+    @DeleteMapping
+    public Result delete(@RequestParam Integer id) {
+        categoryService.deleteById(id);
+        return Result.success();
+    }
 }

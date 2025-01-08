@@ -46,7 +46,7 @@ public class WebConfiguration implements WebMvcConfigurer {
         excludePath.add("/assets/**");  //静态资源
 
         registry.addInterceptor(tokenInterceptor)
-                .addPathPatterns("/admin/**")
+                .addPathPatterns("/article/**")
                 .addPathPatterns("/user/**")
                 .addPathPatterns("/category/**")
                 .excludePathPatterns(excludePath);
