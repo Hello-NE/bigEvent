@@ -28,10 +28,6 @@ public class CategoryController {
         return Result.success(category);
     }
 
-//    @GetMapping
-//    public Result list(@RequestParam int page, @RequestParam int size) {
-//
-//    }
     @GetMapping
     public Result findAll() {
         List<Category> list = categoryService.list();

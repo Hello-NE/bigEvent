@@ -57,8 +57,6 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public void update(Category category) {
         category.setUpdateTime(LocalDateTime.now());
-        Map<String, Object> info = ThreadLocalUtils.get();
-        int userId = Integer.parseInt((String) info.get("userId"));
         categoryMapper.update(category);
     }
 
